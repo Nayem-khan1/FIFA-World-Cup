@@ -64,7 +64,9 @@ header{
     margin-left: 10px;
     font-weight: 700;
 }
-/*style navigation or menu*/
+
+/*---------------style navigation or menu--------------------*/
+
 main{
     display: flex;
     justify-content: center;
@@ -92,7 +94,7 @@ main{
     color: white;
 }
 
-/*style blog part*/
+/*------------------style blog part--------------------------*/
 
 .blogs{
     display: grid;
@@ -117,7 +119,7 @@ main{
     align-items: center;
     justify-content: space-around;
 }
-/*style upcoming match*/
+/*------------------style upcoming match---------------------*/
 
 .conteiner-2{
     border: 1px solid #E8E8E8;
@@ -136,7 +138,7 @@ main{
     text-align: center;
 }
 
-/*style footer part*/
+/*-----------------------style footer part--------------------*/
 
 .footer-bg{
     margin-top: 130px;
@@ -163,4 +165,131 @@ main{
     padding: 80px 20px;
     display: inline-block;
     color: white;
+}
+.social-icon{
+    display: flex;
+}
+/*---------------------
+      Media Queries
+---------------------*/
+
+/*--------mobile device-----------------------*/
+@media only screen and (max-width: 688px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    .header-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .header-content h1{
+        font-size: 40px;
+    }
+    .header-content p{
+        font-size: 16px;
+    }
+    .header-img{
+        width: 100%;
+    }
+    /*------------nav---------------*/
+    main{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 24px;
+    }
+    .menu{
+        background-color: white;
+    }
+    .menu-btn{
+        border: 1px solid #b4b1b1;
+        margin: 16px;
+    }
+    /*------------blog--------------*/
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /*----------------footer---------------------*/
+    .footer-bg{
+        margin-top: 25px;
+        width: 100%;
+    }
+    .footer-header h2{
+        padding-top: 24px;
+    }
+    .hr{
+        width: 100%;
+        margin-top: 24px;
+        margin-bottom: 15px;
+    }
+    .footer-link{
+        width: 100%;
+        height: 260px;
+    }
+    .footer-p{
+        display: block;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+
+/*----------------------tablet device-----------------------*/
+
+@media only screen and (min-width: 688px) and (max-width: 992px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    .header-container{
+        width: 100%;
+    }
+    /*---------nav-------------*/
+    main{
+        display: block;
+        margin-top: 50px;
+    }
+    .menu{
+        flex-direction: row;
+        justify-content: center;
+        background-color: white;
+        width: 100%;
+    }
+    .menu-btn{
+        border: 1px solid #b4b1b1;
+    }
+    /*----------blog---------------*/
+    .blogs{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .none{
+        display: none;
+    }
+    /*---------------footer-----------------*/
+    .footer-bg{
+        width: 100%;
+    }
+    .footer-header h2{
+
+    }
+    .hr{
+        width: 100%;
+    }
+    .footer-link{
+        width: 100%;
+    }
+    
+    .footer-p{
+        text-decoration: none;
+        display: inline-block;
+        color: white;
+        padding: 30px 16px;
+    }
 }
